@@ -19,11 +19,15 @@ let currentVersion = '0.0.1';
 try {
   currentVersion = execSync(`npm view ${packageJson.name} version`, { stdio: 'pipe' }).toString().trim();
 } catch (e) {
-  console.warn(`Unable to get current version from npm. Using ${currentVersion}`);
+  console.warn(`Unable to get current version from npm. Have you published this package yet?`);
 }
 
 // Update the version in the package.json
-console.log(`Updating package.json version from ${packageJson.version} to ${currentVersion}`);
-packageJson.version = currentVersion;
-fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+if (currentVersion === packageJson.version) {
+  console.log(`Versions are already in sync.`);
+} else {
+  console.log(`Updating version from ${packageJson.version} to ${currentVersion}`);
+  packageJson.version = currentVersion;
+  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+}
 console.log('Done!');
