@@ -12,21 +12,21 @@ yarn global add npm-publish-version-control
 ## Usage
 You should be in the root directory when using these scripts.
 ```bash
-npm run sync  # sync package.json version with current npm version
+node sync.js  # sync package.json version with current npm version
 ```
 
 ```bash
-npm run publish        # patch update (1.0.0 -> 1.0.1)
-npm run publish minor  # minor update (1.0.0 -> 1.1.0)
-npm run publish major  # major update (1.0.0 -> 2.0.0)
+node publish.js        # patch update (1.0.0 -> 1.0.1)
+node publish.js minor  # minor update (1.0.0 -> 1.1.0)
+node publish.js major  # major update (1.0.0 -> 2.0.0)
 ```
 
 or
 
 ```bash
-npm run publish    # patch update (1.0.0 -> 1.0.1)
-npm run publish 2  # minor update (1.0.0 -> 1.1.0)
-npm run publish 3  # major update (1.0.0 -> 2.0.0)
+node publish.js    # patch update (1.0.0 -> 1.0.1)
+node publish.js 2  # minor update (1.0.0 -> 1.1.0)
+node publish.js 3  # major update (1.0.0 -> 2.0.0)
 ```
 
 ## License
