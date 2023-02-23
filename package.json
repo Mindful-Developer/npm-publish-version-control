@@ -1,6 +1,6 @@
 {
   "name": "npm-publish-version-control",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This script is used to update the version in the package.json and publish the package to npm",
   "main": "publish.js",
   "scripts": {
