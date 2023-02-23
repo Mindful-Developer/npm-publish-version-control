@@ -1,0 +1,20 @@
+{
+  "name": "npm-publish-version-control",
+  "version": "1.0.0",
+  "description": "This script is used to update the version in the package.json and publish the package to npm",
+  "main": "publish.js",
+  "scripts": {
+    "publish": "node publish.js",
+    "sync": "node sync.js"
+  },
+  "keywords": [
+    "npm",
+    "publish",
+    "package",
+    "version",
+    "update"
+  ],
+  "author": "Christopher James",
+  "license": "GPL-3.0",
+  "type": "module"
+}
